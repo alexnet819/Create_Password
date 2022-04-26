@@ -14,6 +14,7 @@ Random_Str::Random_Str(){
 
 Random_Str::Random_Str(unsigned int length):len(length)
 {
+	mt.seed(rnd());
 }
 
 Random_Str::~Random_Str() {
