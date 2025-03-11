@@ -5,21 +5,19 @@
 #include <string>
 #include <vector>
 
-
-Random_Str::Random_Str(){
-
-	std::cout << "Decide the length of the String to be generated ";
-	std::cin >> this->len;
-}
-
-Random_Str::Random_Str(unsigned int length):len(length)
+Random_Str::Random_Str(unsigned int length = -1):len(length)
 {
 	mt.seed(rnd());
+	if(length == -1)
+	{
+		std::cout << "Decide the length of the String to be generated ";
+		std::cin >> this->len;
+		}
+	return;
 }
 
 Random_Str::~Random_Str() {
-
-
+	this->len = 0;
 }
 
 std::string Random_Str::Create_Str(std::string candidate_chars)
