@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-Random_Str::Random_Str(unsigned int length = -1):len(length)
+Random_Str::Random_Str(unsigned int length):len(length)
 {
 	mt.seed(rnd());
 	if(length == -1)
