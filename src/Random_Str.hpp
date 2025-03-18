@@ -10,7 +10,7 @@ class Random_Str
 {
 public:
 	Random_Str();
-	Random_Str(unsigned int length);
+	Random_Str(unsigned int length = -1);
 	~Random_Str();
 	
 	std::string Create_Str(std::string candidate_chars);
